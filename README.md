@@ -43,7 +43,7 @@ GitHub Pages redéploie tout seul en une minute environ.
 
 ## Publication
 
-GitHub Pages, branche `main`, dossier racine.
+GitHub Pages, branche `main`, dossier racine. Publié sur https://floriancordel.github.io/cevennes-2026/
 La page porte une balise `<meta name="robots" content="noindex, nofollow">` : elle n'est pas indexée
 par les moteurs de recherche, mais elle reste accessible à toute personne disposant du lien.
 
