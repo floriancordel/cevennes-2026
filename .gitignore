@@ -1,0 +1,8 @@
+# Secrets : ne doivent JAMAIS partir sur GitHub
+github-token.txt
+token-v2.txt
+*token*.txt
+.env
+
+# macOS
+.DS_Store
