@@ -1,7 +1,9 @@
 # Secrets : ne doivent JAMAIS partir sur GitHub
+gh-token.txt
 github-token.txt
 token-v2.txt
 *token*.txt
+*.pem
 .env
 
 # macOS
