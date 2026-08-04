@@ -5,13 +5,34 @@ Deux bases : Le Vigan (9-15 août) puis Saint-Jean-du-Gard (15-22 août).
 
 ## Ce que contient la page
 
-- 14 journées détaillées heure par heure, avec le temps de route de chaque trajet et le total quotidien
-- Plafonds tenus : **2h30 de route cumulée par jour, 1h15 maximum d'une seule traite**
-- Une seule randonnée par jour, avec la trace GPX correspondante
+Sept onglets, navigables au pouce sur téléphone et en barre haute sur ordinateur.
+
+**Séjour** — le fil des 14 journées, heure par heure.
+
+- Chaque trajet est écrit explicitement : ce qui se termine, où l'on va, l'altitude de départ et
+  d'arrivée, la durée, la route empruntée, et un bouton qui lance la navigation
+- Plafonds tenus sur les 14 jours : **2h30 de route cumulée, 1h15 maximum d'une seule traite**
+- Une seule randonnée par jour, avec la trace Decathlon Outdoor, Visorando ou le GPX direct
 - Pour chaque lieu : où se garer, les équipements, les restrictions et les pièges connus
-- Les repas écrits : note, téléphone cliquable et horaires au restaurant, plat proposé et liste de courses à la maison
-- **Altitude et température attendue à l'heure prévue sur chacune des 62 étapes**
-- Récapitulatif des réservations à passer, infos pratiques, urgences vétérinaires, réserve d'alternatives
+- Les repas écrits : note, téléphone cliquable et horaires au restaurant, plat proposé et liste de
+  courses à la maison
+- **Altitude et température attendue à l'heure prévue sur chacune des 82 étapes**
+- En bas de chaque journée, un bloc **« Si vous avez le temps, ou l'envie »** : 30 idées bonus au
+  total, rattachées géographiquement à la route du jour, avec leur lien de trace
+
+**Temps forts** — les huit moments qui donnent le ton du séjour, chacun renvoyant à sa journée.
+
+**Carte** — les étapes de chaque journée sur fond OpenStreetMap, semaine par semaine, avec les
+points hors programme à portée.
+
+**Tables** — les 20 repas dans l'ordre chronologique, avec en tête le récapitulatif des 8 tables à
+réserver (niveau, téléphone cliquable), puis une fiche par repas : note, avis, horaires, prix,
+chien, description, alertes, option de repli.
+
+**Courses** — 7 moments d'achat et 9 soirs de préparation, avec la raison de chaque liste.
+
+**Pratique** et **Réserve** — infos pratiques, urgences vétérinaires, randonnées et baignades de
+remplacement.
 
 ## Comment ça se met à jour
 
@@ -31,6 +52,9 @@ Un bandeau en haut du document indique combien d'étapes sont en prévision, com
 et l'heure du dernier relevé.
 
 **Hors ligne**, les altitudes et l'intégralité du carnet restent lisibles ; seules les températures manquent.
+
+Au-delà de **34 °C** sur une journée, un bandeau rouge s'ouvre en tête de cette journée et propose
+le repli en altitude correspondant. Le calcul se fait dans le navigateur, à chaque chargement.
 
 ## Mettre le contenu à jour
 
