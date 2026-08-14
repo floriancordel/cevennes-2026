@@ -357,6 +357,29 @@ html,body{overflow-x:hidden;max-width:100%}
 .st.tp.c1 b{color:var(--river)} .st.tp.c2 b{color:var(--amber)} .st.tp.c3 b{color:var(--red)}
 .st.tp.c3{background:#fdeeea} .st.tp.c1{background:#eef5fa}
 .vig.on{border-color:var(--chestnut);box-shadow:0 0 0 2px rgba(140,74,47,.18)}
+/* --- reperage du jour --- */
+@keyframes puls{0%,100%{opacity:1}50%{opacity:.3}}
+.vig.auj{border-color:var(--red);box-shadow:0 0 0 2px rgba(190,74,47,.22)}
+.vig .bauj{position:absolute;left:8px;top:8px;z-index:2;background:var(--red);color:#fff;font-size:.56rem;
+  font-weight:800;letter-spacing:.09em;text-transform:uppercase;padding:3px 7px;border-radius:99px;
+  box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.gloss .lab .aujl{display:inline-flex;align-items:center;gap:6px;background:var(--red);color:#fff;
+  font-size:.74rem;font-weight:800;padding:4px 11px;border-radius:99px;text-decoration:none;
+  letter-spacing:-.01em;box-shadow:0 4px 12px -6px rgba(190,74,47,.7)}
+.gloss .lab .aujl i{width:6px;height:6px;border-radius:50%;background:#fff;font-style:normal;
+  animation:puls 1.9s ease-in-out infinite}
+.day.auj{scroll-margin-top:72px}
+.day.auj>.head{border-left:3px solid var(--red);padding-left:12px;margin-left:-15px}
+.tauj{display:inline-block;background:var(--red);color:#fff;font-size:.58rem;font-weight:800;
+  letter-spacing:.09em;text-transform:uppercase;padding:2px 7px;border-radius:99px;margin-right:8px;
+  vertical-align:1px}
+.topbar .aujb{display:inline-flex;align-items:center;gap:6px;background:var(--red);color:#fff;
+  font-size:.75rem;font-weight:800;padding:5px 11px;border-radius:99px;text-decoration:none;
+  white-space:nowrap;margin-right:10px;letter-spacing:-.01em}
+.topbar .aujb i{width:6px;height:6px;border-radius:50%;background:#fff;font-style:normal;
+  animation:puls 1.9s ease-in-out infinite}
+@media(max-width:860px){.topbar .aujb b{display:none}.topbar .aujb{padding:5px 9px;margin-right:6px}}
+
 
 /* --- fil des journees --- */
 .sep{display:flex;align-items:center;gap:14px;margin:38px 0 18px}
@@ -616,7 +639,7 @@ tr.leg td{background:#f6f2ec}
 <symbol id="i-train" viewBox="0 0 24 24"><rect x="6" y="3.5" width="12" height="12.5" rx="2.5"/><path d="M6 10h12"/><circle cx="9.2" cy="13.2" r=".8"/><circle cx="14.8" cy="13.2" r=".8"/><path d="M8.5 16L6.5 20M15.5 16l2 4"/></symbol>
 <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.2l2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.7l6.1-.9z"/></symbol>
 </svg>
-<div class="topbar"><a href="#jours" class="marque">Cévennes <i>2026</i></a><div class="spacer"></div><nav class="tabs"><a data-nav="jours" href="#jours">Séjour</a><a data-nav="forts" href="#forts">✨ Temps forts</a><a data-nav="carte" href="#carte">Carte</a><a data-nav="tables" href="#tables">Tables</a><a data-nav="courses" href="#courses">Courses</a><a data-nav="pratique" href="#pratique">Pratique</a><a data-nav="reserve" href="#reserve">Réserve</a></nav></div>
+<div class="topbar"><a href="#jours" class="marque">Cévennes <i>2026</i></a><div class="spacer"></div><span id="aujb"></span><nav class="tabs"><a data-nav="jours" href="#jours">Séjour</a><a data-nav="forts" href="#forts">✨ Temps forts</a><a data-nav="carte" href="#carte">Carte</a><a data-nav="tables" href="#tables">Tables</a><a data-nav="courses" href="#courses">Courses</a><a data-nav="pratique" href="#pratique">Pratique</a><a data-nav="reserve" href="#reserve">Réserve</a></nav></div>
 <div class="wrap"><div id="app"></div></div>
 <nav class="tabbar"><a data-nav="jours" href="#jours"><svg viewBox="0 0 24 24"><path d="M4 6h16v14H4z"/><path d="M4 10h16M9 3v4M15 3v4"/></svg>Séjour</a><a data-nav="forts" href="#forts"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8z"/></svg>Moments</a><a data-nav="carte" href="#carte"><svg viewBox="0 0 24 24"><path d="M9 4L3 6.5v14L9 18l6 2.5 6-2.5v-14L15 6.5z"/><path d="M9 4v14M15 6.5v14"/></svg>Carte</a><a data-nav="tables" href="#tables"><svg viewBox="0 0 24 24"><path d="M7 3v8a2 2 0 0 0 4 0V3M9 11v10"/><path d="M17.5 3c-1.6 1.1-2.2 3.1-2.2 5.2 0 2 .7 3 2.2 3V21"/></svg>Tables</a><a data-nav="courses" href="#courses"><svg viewBox="0 0 24 24"><path d="M3.5 9h17l-1.6 10.5H5.1z"/><path d="M9 9l2.2-5M15 9l-2.2-5"/></svg>Courses</a><a data-nav="pratique" href="#pratique"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v5h1"/></svg>Pratique</a><a data-nav="reserve" href="#reserve"><svg viewBox="0 0 24 24"><path d="M2 20l6.5-11 3.5 5.5 2.2-3.3L22 20z"/><circle cx="16.5" cy="5.5" r="1.6"/></svg>Réserve</a></nav>
 <button id="top" aria-label="Retour en haut">&#8593;</button>
@@ -701,9 +724,10 @@ function resume(j){
   return f.length?'<div class="dayfoot">'+f.join('')+'</div>':'';
 }
 function jourHTML(j,n){
-  var h='<article class="day" id="'+j.id+'">';
+  var au=(n-1)===AUJ;
+  var h='<article class="day'+(au?' auj':'')+'" id="'+j.id+'">';
   if(j.cover)h+='<div class="cover"><img src="'+j.cover.src+'" alt="'+esc(j.cover.alt)+'" loading="lazy" onerror="this.parentElement.classList.add(\'nope\')"><div class="cap">'+j.cover.cap+'</div></div>';
-  h+='<div class="head"><div class="dt">Jour '+n+' · '+j.dt+'</div><h3>'+j.titre+'</h3>';
+  h+='<div class="head"><div class="dt">'+(au?'<span class="tauj">Aujourd\'hui</span>':'')+'Jour '+n+' · '+j.dt+'</div><h3>'+j.titre+'</h3>';
   if(j.pitch)h+='<p class="pitch">'+j.pitch+'</p>';
   h+='<div class="tags">'+(j.tags||[]).filter(function(t){return t.cls!=='t-tot'}).map(function(t){
     return '<span class="tag '+t.cls+'">'+t.txt+'</span>'}).join('')+'</div>'+resume(j)+'</div>';
@@ -717,9 +741,17 @@ function jourHTML(j,n){
   h+=bonusHTML(j);
   return h+'</article>';
 }
+var AUJ=(function(){
+  var t=new Date(); t.setHours(0,0,0,0);
+  var d0=new Date(2026,7,9); d0.setHours(0,0,0,0);
+  var k=Math.round((t-d0)/86400000);
+  return (k>=0&&k<14)?k:-1;
+})();
 function vig(j,n){
   var im=j.cover?'<img src="'+j.cover.src+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">':'';
-  return '<a class="vig" href="#'+j.id+'" data-v="'+j.id+'"><div class="im">'+im+'<div class="g"></div>'+
+  var au=(n-1)===AUJ;
+  return '<a class="vig'+(au?' auj':'')+'" href="#'+j.id+'" data-v="'+j.id+'"><div class="im">'+im+'<div class="g"></div>'+
+   (au?'<span class="bauj">Aujourd\'hui</span>':'')+
    '<span class="n">'+n+'</span><span class="d">'+j.dt.split('·')[0].trim()+'</span></div><div class="co">'+
    '<h5>'+j.titre+'</h5><div class="stats">'+
    '<span class="st rd"><b>'+(j.rando?j.rando[0]:'—')+'</b><span>rando</span></span>'+
@@ -741,10 +773,19 @@ function initRail(){
   var pas=function(){return (r.querySelector('.vig')||{offsetWidth:200}).offsetWidth+10};
   L.onclick=function(){r.scrollBy({left:-pas()*2,behavior:'smooth'})};
   R.onclick=function(){r.scrollBy({left: pas()*2,behavior:'smooth'})};
-  r.addEventListener('scroll',maj,{passive:true}); maj();
-  // petit mouvement au chargement pour signaler que ca defile
-  setTimeout(function(){if(r.scrollLeft===0){r.scrollTo({left:34,behavior:'smooth'});
-    setTimeout(function(){r.scrollTo({left:0,behavior:'smooth'})},430)}},700);
+  r.addEventListener('scroll',maj,{passive:true});
+  if(AUJ>=0){
+    // on ouvre le carrousel sur la journee du jour, sans animation
+    var c=r.children[AUJ];
+    if(c){var x=c.offsetLeft-(r.clientWidth-c.offsetWidth)/2;
+          r.scrollLeft=Math.max(0,Math.min(x,r.scrollWidth-r.clientWidth));}
+    maj();
+  } else {
+    maj();
+    // hors sejour : petit mouvement au chargement pour signaler que ca defile
+    setTimeout(function(){if(r.scrollLeft===0){r.scrollTo({left:34,behavior:'smooth'});
+      setTimeout(function(){r.scrollTo({left:0,behavior:'smooth'})},430)}},700);
+  }
 }
 
 function fortsCards(){
@@ -769,7 +810,9 @@ function accueil(){
     '<p>'+(H.lead||'')+'</p>'+
     '<a class="hgo" href="#forts">✨ Les huit moments qu\'on raconte en rentrant ›</a></div></div>';
   h+='<div class="gloss"><div class="lab"><b>Les 14 journées</b>'+
-     '<span class="hint">Faites glisser <svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></div>'+
+     (AUJ>=0
+      ? '<a class="aujl" href="#'+D.jours[AUJ].id+'"><i></i>Aujourd\'hui · jour '+(AUJ+1)+' ›</a>'
+      : '<span class="hint">Faites glisser <svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>')+'</div>'+
      '<div class="railwrap"><button class="arw l" id="arwL" hidden>‹</button><button class="arw r" id="arwR">›</button>'+
      '<div class="fadeL" id="fdL"></div><div class="fadeR" id="fdR"></div>'+
      '<div class="rail" id="rail">'+D.jours.map(function(j,i){return vig(j,i+1)}).join('')+'</div></div>'+
@@ -968,6 +1011,12 @@ function initCarte(){
   document.querySelectorAll('.mapbar button').forEach(function(x){
     x.onclick=function(){window.__SEM=+x.dataset.s;rendre()}});
 }
+function majBoutonJour(){
+  var b=q('aujb'); if(!b)return;
+  if(AUJ<0){b.innerHTML='';return}
+  var j=D.jours[AUJ];
+  b.innerHTML='<a class="aujb" href="#'+j.id+'"><i></i>Aujourd\'hui<b> · jour '+(AUJ+1)+'</b></a>';
+}
 function rendre(){
   var h=(location.hash||'').replace('#/','').replace('#','');
   var vue=VUES.indexOf(h)>-1?h:'jours';
@@ -981,6 +1030,7 @@ function rendre(){
     if(vue==='carte')setTimeout(initCarte,40);
     if(vue==='tables')initTables();}
   document.querySelectorAll('[data-nav]').forEach(function(a){a.classList.toggle('on',a.dataset.nav===vue)});
+  majBoutonJour();
   if(window.__apresRendu)window.__apresRendu();
 }
 addEventListener('hashchange',function(){
